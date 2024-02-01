@@ -1,29 +1,155 @@
-body {
-    margin: 50px;
-    background-color: #EFEFEF;
+* {
+    box-sizing: border-box;
 }
 
-h2, h3, h4, p {
-    font-family: "Karla", sans-serif;
+@font-face {
+    font-family: "Aptos";
+    src: url("aptos.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Aptos";
+    src: url("aptos-semibold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Aptos";
+    src: url("aptos-bold.ttf");
+    font-weight: 700;
+}
+
+body {
+    animation: fade 0.2s;
+    font-family: "Aptos", sans-serif;
+    background-color: #FAFAFA;
+    margin: 0;
+}
+
+section {
+    padding-left: 300px;
 }
 
 h1 {
-    font-family: "Merriweather", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    width: 300px;
+    top: 0;
+    float: left;
+    height: 100%;
+    position: fixed;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    display: block !important;
+    width: 100%;
+    padding: 20px 30px;
+    color: #636363;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #212121;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #f44436;
+    font-weight: bold;
+}
+
+header {
+    padding: 0 50px;
+}
+
+header img {
+    float: right;
+    width: 100px;
+}
+
+article {
+    padding: 20px 50px;
+}
+
+article a {
+    color: #0276aa;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+}
+
+p {
+    font-family: #424242;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.float::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.float .sec {
+    float: left;
+    margin-right: 30px;
+}
+
+.float .sec img {
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    padding: 15px;
+}
+
+.float .sec h3 {
+    font-weight: 600;
+    text-align: center;
     margin: 0;
-    text-align: center;
 }
 
-h3 {
-    text-align: center;
+button {
+    padding: 8px 15px;
+    border: 2px solid #f44436;
+    background-color: transparent;
+    border-radius: 2px;
+    color: #f44436;
+    font-family: "Aptos", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.card {
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    border: 2px solid #FF8A65;
+button.big {
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f44436;
+    color: white;
 }
