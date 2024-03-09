@@ -21,13 +21,13 @@
 }
 
 body {
-    animation: fade 0.2s;
     font-family: "Aptos", sans-serif;
     background-color: #FAFAFA;
     margin: 0;
 }
 
 section {
+    animation: fade 0.2s;
     padding-left: 300px;
 }
 
