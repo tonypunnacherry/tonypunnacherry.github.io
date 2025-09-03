@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tetris</title>
+        <style>
+            body {
+                background-color: #212121;
+            }
+            h1, h2 {
+                color: white;
+            }
+            #grid {
+                border: 1px solid #636363;
+                display: inline-block;
+            }
+
+            #grid .row::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            #grid .row .cell {
+                float: left;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #636363;
+            }
+            .screen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,.4);
+                text-align: center;
+                display: none;
+            }
+            .screen h2 {
+                color: white;
+                font-size: 64px;
+            }
+            .screen p {
+                color: white;
+                font-size: 28px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tetris</h1>
+        <h2>Level: <span id="level"></span></h2>
+        <div id="grid"></div>
+        <div id="pause_screen" class="screen">
+            <h2>Paused</h2>
+            <p>Press SPACEBAR to unpause</p>
+        </div>
+        <div id="end_screen" class="screen">
+            <h2>Game over!</h2>
+            <p>Refresh to play again</p>
+        </div>
+        <script src="tetris-script.js"></script>
+    </body>
+</html>
